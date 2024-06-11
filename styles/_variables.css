@@ -1,0 +1,27 @@
+:root {
+    --white-col-1: #FFFFFF ;
+    --white-col-2:  rgba(255, 255, 255, 0.85);
+    --white-col-3:  rgba(236, 236, 236, 1);
+    --white-col-4:  #CACACA;
+    --black-col-1: #000000 ;
+    --black-col-2: #333333 ;
+    --black-col-3: #666666 ;
+    --grey-col-1: #999999;
+    --grey-col-2: rgba(0, 0, 0, 0.5);
+    --grey-col-3: #E5E5E5;
+    --orange-col-1: #9D5CD0 ;
+    --orange-col-2: #C283F3 ;
+    --orange-col-3: #D1A9F0;
+    --orange-col-4:  #7943A4;
+    --green-col: #30BF39;
+    --blue-col: #26A5E4 ;
+    --red-col: #D11616 ;
+    --fsz-sm: 16px;
+    --fsz-sm2: 18px
+    --fsz-med: 24px;
+    --fsz-lg: 48px;
+    --cont-padding: 50px;
+    --cont-width : 1700px;
+
+    /* transition */
+  }

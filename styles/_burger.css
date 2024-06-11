@@ -1,0 +1,104 @@
+
+.top-header__menu-burger {
+    display: none;
+    position: relative;
+    padding: 13px;
+    width: 46px;
+    z-index: 2;
+    cursor: pointer;
+    transition:  background-color .3s ease-in-out;
+}
+
+
+.top-header__menu-burger:focus {  
+  outline: none;
+}
+.top-header__menu-burger:focus .menu-burger__line {  
+  outline: none;
+  background-color: var(--orange-col-1);
+}
+.top-header__menu-burger:hover .menu-burger__line { 
+  background-color: var(--orange-col-2);
+}
+
+.menu-burger__line {
+    display: block;
+    position: absolute;
+    height: 3.65px;
+    display: inline-block;
+    background-color: var(--white-col-1);
+    transition: background-color .3s ease-in-out;
+   
+}
+
+.menu-burger__line:hover {  
+  color: var(--orange-col-1);
+}
+
+.menu-burger__line:nth-child(1) {
+    top: 0;
+    left: 0;
+    width: 36px;
+}
+.menu-burger__line:nth-child(2) {
+    top: 13px;
+    left: 0;
+    width: 28px;
+}
+.menu-burger__line:nth-child(3) {
+    top: 25px;
+    left: 0;
+    width: 24px;
+}
+.is-opened.menu-burger__line {
+    transform-origin: center;
+}
+
+.is-opened.top-header__menu-burger .menu-burger__line:nth-child(1) {
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+}
+.is-opened.top-header__menu-burger .menu-burger__line:nth-child(2) {
+    opacity: 0;
+    transform: translateX(-100%);
+    }
+.is-opened.top-header__menu-burger .menu-burger__line:nth-child(3) {
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
+    width: 36px;
+}
+
+@media only screen and (max-width: 1280px) {
+    .top-header__menu-burger {
+      display: block;
+      background-color: transparent;
+      border: none;
+  }
+}
+
+@media only screen and (max-width: 324px) {
+
+  .top-header__menu-burger {
+    padding: 10px;
+  }
+  .menu-burger__line {
+    height: 2px;
+  }
+  .menu-burger__line:nth-child(1) {
+    width: 25px;
+  }
+  .menu-burger__line:nth-child(2) {
+    width: 16px;
+    top: 9px;
+  }
+  .menu-burger__line:nth-child(3) {
+    top: 17px;
+    width: 10px;
+  }
+
+  .is-opened.top-header__menu-burger .menu-burger__line:nth-child(3),
+  .is-opened.top-header__menu-burger .menu-burger__line:nth-child(1) {
+    width: 19px;
+    }
+   
+ }

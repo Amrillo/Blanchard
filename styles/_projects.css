@@ -1,0 +1,307 @@
+.section__projects {
+    background-color: var(--white-col-1);
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.projects__title {
+    margin-bottom: 16px;
+}
+.projects__text {
+    margin-bottom: 22px;
+    max-width: 1080px;
+}
+.projects__slide-title {
+    margin-bottom: 23px;
+}
+.projects__text-link {
+   color: var(--orange-col-1);
+   cursor: pointer;
+   position: relative;
+   transition: color .3s ease-in-out;
+}
+.projects__text-link span {
+  position: relative;
+}
+
+.projects__text-link::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10%;
+  height: 1px;
+  width: 100%;
+  background-color: var(--orange-col-1);
+  transform-origin: left;
+  transform: scale(0);
+  transition: transform .3s ease-in-out;
+}
+.projects__text-link::before {
+  content: "";
+  position: absolute;
+  background-color: var(--orange-col-1);
+  transform: scaleX(0);
+  transition: transform .3s ease-in;
+  top: -3px;
+  left: -6px;
+  right: -6px;
+  bottom: -3px;
+}
+
+.projects__text-link:hover::after {
+  transform: scale(1);
+}
+.projects__text-link:active:after {
+  transform: scale(1);
+  background-color: var(--orange-col-4);
+}
+.projects__text-link:active {
+  color: var(--orange-col-4);
+}
+.projects__text-link:focus:not(:hover):not(:active):before {
+   transform: scale(1);
+}
+.projects__text-link:focus:not(:hover):not(:active) {
+  color: var(--white-col-1);
+}
+.projects__tooltip-btn {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.projects__tooltip-btn svg  {  
+  transition: fill .3s ease-in-out;
+}
+.projects__tooltip-btn svg:hover ,
+.projects__tooltip-btn:focus:not(:hover) svg{  
+  fill: var(--orange-col-3);
+}
+.projects__tooltip-btn:active svg {  
+  fill: var(--orange-col-1);
+} 
+.projects__tooltip-btn:active svg path {  
+  fill: white;
+  stroke: var(--orange-col-1);
+} 
+.tippy-box[data-theme~='project'] {
+  background-color: var(--black-col-1);
+  color: var(--white-col-1);
+}
+
+.projects__swiper {
+  width: calc(1450/1600 * 100%);
+}
+.projects__swiper-wrapper {
+
+  margin: 0 auto;
+}
+.projects__swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 150px;
+  padding: 40px;
+  transition: filter .3s ease-in-out, opacity .3s ease-in-out;
+  cursor: pointer;
+  box-sizing: border-box;
+  position: relative;
+  z-index:1 ;
+  border: 1px solid  #CACACA;
+  transition: border-color .3s ease-in-out, filter .3s ease-in-out, opacity .3s ease-in-out;
+}
+
+.projects__swiper-slide img {
+  filter: grayscale(1);
+  opacity: .3;
+  transition: filter .3s ease-in-out, opacity .3s ease-in-out;
+}
+.projects__swiper-slide:hover img {
+  filter: grayscale(0);
+  opacity: 1;
+}
+.projects__swiper-slide:focus:not(:hover):not(:active),
+.projects__swiper-slide:active{
+  border-color: var(--orange-col-1);
+}
+.projects__swiper-slide:focus:not(:hover):not(:active) img {
+  filter: grayscale(0);
+  opacity: 1;
+}
+
+.projects__prev-btn,
+.projects__next-btn {
+  background-color: black;
+  top: 88%;
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 50%;
+  background-color:  #ECECEC;
+  transition: background-color .3s ease-in-out;
+}
+.projects__prev-btn {
+  left: 3%;
+}
+.projects__next-btn {
+  right: 3%;
+}
+.projects__btn-disabled.projects__prev-btn::after,
+.projects__btn-disabled.projects__next-btn::after {
+  border-color: #CACACA;
+}
+
+.projects__prev-btn::after,
+.projects__next-btn::after {
+  position: absolute;
+  border: solid black;
+  border-width: 0 1px 1px 0;
+  display: inline-block;
+  padding: 3px;
+}
+.projects__prev-btn::after {
+  transform: rotate(135deg);
+}
+.projects__next-btn::after {
+  transform: rotate(-45deg);
+}
+
+.projects__prev-btn:hover,
+.projects__next-btn:hover {
+  background-color: var(--orange-col-3);
+}
+.projects__prev-btn:focus:not(:hover):not(:active),
+.projects__next-btn:focus:not(:hover):not(:active) {
+  box-shadow: 0 0 0 3px var(--orange-col-1);
+}
+.projects__prev-btn:active,
+.projects__next-btn:active {
+  box-shadow: 0 0 0 3px var(--orange-col-1);
+  background-color: var(--orange-col-3);
+}
+
+
+@media only screen and (max-width: 1280px) {
+  .projects__swiper-slide {
+    height: 128px;
+    padding: 30px;
+  }
+   
+}
+@media only screen and (max-width: 1024px) {
+  .section__projects {  
+    padding-top: 45px;
+  }
+  .projects__text {
+    margin-bottom: 20px;
+  }  
+  .projects__prev-btn,
+  .projects__next-btn {  
+    top: 89.5%;
+  }
+  .projects__prev-btn {  
+    left: 5%;
+  }
+  .projects__next-btn { 
+    right: 5%;
+  }
+  .projects__swiper {
+    width: calc(1421/1600 * 100%);
+  }  
+  .projects__swiper-slide img { 
+    width: 210px;
+    height: 52px;
+  }
+}
+
+@media only screen and (max-width: 768px) { 
+  .section__projects {
+    padding-top: 45px;
+  }
+  .projects__text {
+    margin-bottom: 28px;
+    max-width: 680px;
+  }
+  .projects__slide-title {
+    margin-bottom: 29px;
+  }
+  .projects__swiper {
+    width: calc(1350/1600 * 100%);
+   }
+   .projects__swiper-slide {
+    height: 107px; 
+  }  
+  .projects__prev-btn, 
+  .projects__next-btn {
+    top: 93%;
+   }
+  .projects__prev-btn {
+    left: 6.5%;
+    }
+  .projects__next-btn {
+      right: 6.5%;
+  }
+} 
+
+@media only screen and (max-width: 620px) {  
+
+  .projects__prev-btn, 
+  .projects__next-btn {
+      top: 94%;
+   }
+   .projects__swiper-slide img { 
+    width: 180px;
+    height: 45px;
+   }
+  .projects__swiper-slide {
+     padding: 20px;
+   }
+}  
+@media only screen and (max-width: 480px) { 
+  .projects__swiper {
+    width: 62%;
+  }
+  .projects__prev-btn, 
+  .projects__next-btn {
+     top: 95%;
+   }
+}  
+
+@media only screen and (max-width: 325px) {  
+    .section__projects {  
+      padding-top: 7px;
+    }
+   .projects__title {  
+      font-size: 28px;
+      line-height: 38px;
+      margin-bottom: 12px;
+    }
+    .projects__text {  
+      margin-bottom: 19px;
+    }
+    .projects__swiper {
+      width: 68%;
+    }
+    .projects__slide-title { 
+      margin-bottom: 11px;
+    }
+    .projects__prev-btn, 
+    .projects__next-btn {
+      top: 98%;
+    }
+    .projects__prev-btn {
+      left: 4.5%;
+      }
+    .projects__next-btn {
+        right: 4.5%;
+    }
+    .projects__swiper-slide {
+      height: 65px; 
+    } 
+    .projects__swiper-slide img { 
+      width: 104px;
+      height: 25px;
+    }
+    .projects__slide-title { 
+      font-size: 18px;
+    }
+} 
