@@ -1,15 +1,15 @@
-@import url(_global.css);
-@import url(_link-text.css);
-@import url(_variables.css);
-@import url(_header.css);
-@import url(_hero.css);
-@import  url(_aboutus.css);
-@import  url(_gallery.css);
-@import url(_catalog.css);
-@import url(_events.css);
-@import  url(_projects.css);
-@import url(_contacts.css);
-@import url(_footer.css);
+@import url("_global.css");
+@import url("_link-text.css");
+@import url("_variables.css");
+@import url("_header.css");
+@import url("_hero.css");
+@import  url("_aboutus.css");
+@import  url("_gallery.css");
+@import url("_catalog.css");
+@import url("_events.css");
+@import  url("_projects.css");
+@import url("_contacts.css");
+@import url("_footer.css");
 
 
 /* ----------------------------- section hero ----------------------------*/
